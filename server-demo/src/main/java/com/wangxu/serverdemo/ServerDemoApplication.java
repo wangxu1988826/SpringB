@@ -1,15 +1,15 @@
-package com.wangxu.learnsboot;
+package com.wangxu.serverdemo;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.wangxu.learnsboot.mapper")
-public class LearnsbootApplication {
+@MapperScan("com.wangxu.serverdemo.mapper")
+public class ServerDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LearnsbootApplication.class, args);
+        SpringApplication.run(ServerDemoApplication.class, args);
     }
 
 }

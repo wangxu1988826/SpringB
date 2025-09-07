@@ -1,6 +1,6 @@
-package com.wangxu.learnsboot.service;
+package com.wangxu.serverdemo.service;
 
-import com.wangxu.learnsboot.model.Student;
+import com.wangxu.serverdemo.model.Student;
 
 public interface StudentService {
     /**

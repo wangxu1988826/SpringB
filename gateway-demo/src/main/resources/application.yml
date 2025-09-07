@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+#含义
+#网关端口是 8081
+#匹配请求路径 /api/** 的请求
+#去掉第 1 个路径前缀（/api）后，再转发到 http://localhost:8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: student-service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/**
+          filters:
+            - StripPrefix=1

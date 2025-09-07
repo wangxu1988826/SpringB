@@ -1,8 +1,8 @@
-package com.wangxu.learnsboot.service.impl;
+package com.wangxu.serverdemo.service.impl;
 
-import com.wangxu.learnsboot.mapper.StudentMapper;
-import com.wangxu.learnsboot.model.Student;
-import com.wangxu.learnsboot.service.StudentService;
+import com.wangxu.serverdemo.mapper.StudentMapper;
+import com.wangxu.serverdemo.model.Student;
+import com.wangxu.serverdemo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

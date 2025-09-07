@@ -1,4 +1,4 @@
-package com.wangxu.learnsboot.model;
+package com.wangxu.serverdemo.model;
 
 public class Student {
     private Integer id;

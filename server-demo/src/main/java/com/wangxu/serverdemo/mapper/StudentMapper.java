@@ -1,6 +1,6 @@
-package com.wangxu.learnsboot.mapper;
+package com.wangxu.serverdemo.mapper;
 
-import com.wangxu.learnsboot.model.Student;
+import com.wangxu.serverdemo.model.Student;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
