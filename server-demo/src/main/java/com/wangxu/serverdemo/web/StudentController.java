@@ -29,9 +29,9 @@ public class StudentController {
         return studentService.queryStudentById(id);
     }
 
-    @RequestMapping("/say")
-    @ResponseBody
-    public String sayHello(){
-        return "hello world";
-    }
+//    @RequestMapping("/say")
+//    @ResponseBody
+//    public String sayHello(){
+//        return "hello world";
+//    }
 }

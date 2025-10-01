@@ -1,0 +1,4 @@
+com\wangxu\testdemo\module\User.class
+com\wangxu\testdemo\service\UserService.class
+com\wangxu\testdemo\api\UserRepository.class
+com\wangxu\testdemo\TestDemoApplication.class

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.wangxu.testdemo.UserServiceUnitTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.761 s -- in com.wangxu.testdemo.UserServiceUnitTest

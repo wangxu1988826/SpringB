@@ -6,7 +6,13 @@
     <!-- 必须要有 modelVersion -->
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- 父工程继承 Spring Boot 的 Paren -->
+    <!-- 父工程本身，不打包成 jar 或 war -->
+    <groupId>com.wangxu</groupId>
+    <artifactId>learnsboot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <!-- 继承 Spring Boot 的依赖管理 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -14,14 +20,38 @@
         <relativePath/> <!-- lookup parent from Maven central -->
     </parent>
 
-    <groupId>com.wangxu</groupId>
-    <artifactId>learnsboot</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging> <!-- 父工程是聚合工程 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring Cloud 版本依赖管理 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2023.0.3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Spring Cloud Alibaba 依赖 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2023.0.1.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <properties>
+        <java.version>17</java.version>
+        <spring-cloud.version>2023.0.3</spring-cloud.version>
+    </properties>
 
     <modules>
         <module>gateway-demo</module>
         <module>server-demo</module>
+        <module>client-demo</module>
+        <module>test-demo</module>
     </modules>
 
 </project>

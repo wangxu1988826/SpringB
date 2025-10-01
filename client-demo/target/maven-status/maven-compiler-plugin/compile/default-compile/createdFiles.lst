@@ -1,0 +1,3 @@
+com\wangxu\clientdemo\controller\ClientController.class
+com\wangxu\clientdemo\api\HelloClient.class
+com\wangxu\clientdemo\ClientDemoApplication.class

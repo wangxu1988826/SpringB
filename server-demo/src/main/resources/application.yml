@@ -1,8 +1,21 @@
+#下面的配置放到nacos配置中心了
 server:
-  port: 8080
+  port: 8081
+
 spring:
   application:
     name: server-demo
+  config:
+    import: nacos:server-demo.yaml #要对应你在 Nacos 配置中心新建的 Data ID
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml          # 配置文件格式
+        refresh-enabled: true
+      discovery:
+        server-addr: localhost:8848
+#下面的配置放到nacos配置中心  没有成功  先打开  后面学着放nacos配置中心
   data:
     redis:
       host: 192.168.1.15

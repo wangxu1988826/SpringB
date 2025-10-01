@@ -10,14 +10,22 @@
 
     <artifactId>server-demo</artifactId>
 
-    <properties>
-        <java.version>17</java.version>
-    </properties>
     <dependencies>
         <!--SpringBoot框架web项目起步依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Nacos 注册中心 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
         <!--血泪教训mybatis和mysql不兼容导致花了整个下午，最后解决办法是用比较新的版本的mysql-->
