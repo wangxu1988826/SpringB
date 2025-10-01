@@ -1,4 +1,3 @@
-#下面的配置放到nacos配置中心了
 server:
   port: 8081
 
@@ -6,7 +5,8 @@ spring:
   application:
     name: server-demo
   config:
-    import: nacos:server-demo.yaml #要对应你在 Nacos 配置中心新建的 Data ID
+    import: nacos:server-demo?refresh=true # 对应你在Nacos配置中心创建的 Data ID，我开始写成了server-demo.yaml，而nacos里面是server-demo读取配置文件为空
+
   cloud:
     nacos:
       config:
@@ -15,16 +15,5 @@ spring:
         refresh-enabled: true
       discovery:
         server-addr: localhost:8848
-#下面的配置放到nacos配置中心  没有成功  先打开  后面学着放nacos配置中心
-  data:
-    redis:
-      host: 192.168.1.15
-      port: 6379
-      database: 0
-      connect-timeout: 5000
-      lettuce:
-        pool:
-          max-active: 8
-          max-wait: -1ms
-          max-idle: 8
-          min-idle: 0
+
+#数据库的的配置放到nacos配置中心
